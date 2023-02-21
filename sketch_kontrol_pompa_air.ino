@@ -1,4 +1,5 @@
 #include <LiquidCrystal.h>
+
 byte bar[8] = {
   B11111,
   B11111,
@@ -10,12 +11,14 @@ byte bar[8] = {
   B11111
 };  // custom character for the bar
 // Definisikan pin yang digunakan
+
 const int waterFlowSensorPin = 2;
 const int tandonInputValvePin = 3;
 const int tandonOutputValvePin = 4;
 const int waterPumpPin = 5;
 const int levelSwitchPin1 = 6;
 const int levelSwitchPin2 = 7;
+const int LCD_Backlight = A14;
 
 const int rs = 8, en = 9, d4 = 10, d5 = 11, d6 = 12, d7 = 13;
 
@@ -29,6 +32,8 @@ const float flowRateConstant = 7.5;
 
 void setup() {
   // Set pin yang digunakan sebagai input atau output
+  pinMode(LCD_Backlight, OUTPUT); 
+  analogWrite(LCD_Backlight, 200);//Adjust for LCD_Backlight
   pinMode(waterFlowSensorPin, INPUT);
   pinMode(tandonInputValvePin, OUTPUT);
   pinMode(tandonOutputValvePin, OUTPUT);
