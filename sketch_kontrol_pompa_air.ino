@@ -35,7 +35,7 @@ void setup() {
   pinMode(waterPumpPin, OUTPUT);
   pinMode(levelSwitchPin1, INPUT_PULLUP);
   pinMode(levelSwitchPin2, INPUT_PULLUP);
-  pinMode(levelSwitchPin3, INPUT_PULLUP);
+
 
   // Set keadaan awal pin
   digitalWrite(tandonInputValvePin, LOW);
