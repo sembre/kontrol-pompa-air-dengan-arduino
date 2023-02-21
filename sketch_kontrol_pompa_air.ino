@@ -16,8 +16,8 @@ const int tandonOutputValvePin = 4;
 const int waterPumpPin = 5;
 const int levelSwitchPin1 = 6;
 const int levelSwitchPin2 = 7;
-const int levelSwitchPin3 = 8;
-const int rs = 9, en = 10, d4 = 11, d5 = 12, d6 = 13, d7 = 14;
+
+const int rs = 8, en = 9, d4 = 10, d5 = 11, d6 = 12, d7 = 13;
 
 // Deklarasi objek untuk tampilan LCD
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
